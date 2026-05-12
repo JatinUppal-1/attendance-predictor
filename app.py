@@ -8,14 +8,15 @@ st.markdown("Calculate your status for **CGC Landran** classes.")
 col1, col2 = st.columns(2)
 
 with col1:
-    conducted = st.number_input("Classes Conducted", min_value=1, value=40)
-    attended = st.number_input("Classes Attended", min_value=0, value=30)
+    conducted = st.number_input("Classes Conducted", min_value=1, value=200)
+    attended = st.number_input("Classes Attended", min_value=0, value=200)
 
 with col2:
     planned_miss = st.number_input("Planned Misses", min_value=0, value=0)
 
 if st.button("Check My Status", use_container_width=True):
     percentage = calculate_attendance(conducted, attended, planned_miss)
+    percentage=int(percentage)
     
     st.divider()
     st.subheader(f"Predicted Attendance: {percentage}%")
