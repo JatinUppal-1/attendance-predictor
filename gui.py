@@ -21,7 +21,7 @@ def get_result():
         elif 75 <= res < 80:
             messagebox.showinfo("Status", "Warning: Likely to be detained.")
         else:
-            messagebox.showinfo("Status", "Safe: You are good to go!")
+            messagebox.showinfo("Status", "Not detained!")
             
     except ValueError:
         messagebox.showerror("Error", "Please enter valid numbers only!")
@@ -33,15 +33,15 @@ root.geometry("400x300")
 
 # --- UI Elements ---
 tk.Label(root, text="Classes Conducted:").pack(pady=5)
-entry_conducted = tk.Entry(root)
+entry_conducted = tk.Entry(root,bg="White",foreground="Black")
 entry_conducted.pack()
 
 tk.Label(root, text="Classes Attended:").pack(pady=5)
-entry_attended = tk.Entry(root)
+entry_attended = tk.Entry(root,bg="White",foreground="Black")
 entry_attended.pack()
 
 tk.Label(root, text="Planned Misses:").pack(pady=5)
-entry_miss = tk.Entry(root)
+entry_miss = tk.Entry(root,bg="White",foreground="Black")
 entry_miss.pack()
 
 tk.Button(root, text="Calculate Status", command=get_result, bg="green").pack(pady=20)
