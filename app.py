@@ -4,7 +4,7 @@ from utils.attendance import calculate_attendance, classes_needed_to_reach_targe
 
 st.set_page_config(page_title="Attendance Predictor", page_icon="🎓")
 st.title("🎓 Attendance Predictor")
-st.markdown("Calculate your status for **CGC Landran** classes.")
+st.markdown("Calculate your status for classes.")
 
 col1, col2 = st.columns(2)
 
