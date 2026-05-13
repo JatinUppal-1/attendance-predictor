@@ -30,7 +30,7 @@ elif percentage<75:
 else:
     st.success("✅ **SAFE**: You are maintaining a good record.")
 
-if True:
+if percentage<99:
     target = st.slider("What is your goal percentage?", percentage, 100, percentage)
     
     needed = classes_needed_to_reach_target(target, conducted, attended, planned_miss)
