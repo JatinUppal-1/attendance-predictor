@@ -17,3 +17,4 @@ attendance-predictor/
 ├── main.py             # Main entry point and status flags
 └── .github/workflows/  # CI/CD automation blueprint
 └──gui.py #GUI interface
+└──app.py
