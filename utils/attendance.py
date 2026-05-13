@@ -1,10 +1,12 @@
+import math 
+
 def calculate_attendance(conducted,attended,miss):
     total = conducted+miss
 
     attendance = (attended/total)*100
     return attendance
  
- import math
+
 
 def classes_needed_to_reach_target(target, conducted, attended, planned_miss):
     current_total = conducted + planned_miss
