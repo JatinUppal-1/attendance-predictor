@@ -1,7 +1,7 @@
 import math 
 
-def calculate_attendance(conducted,attended,miss):
-    total = conducted+miss
+def calculate_attendance(conducted,attended,planned_miss):
+    total = conducted+planned_miss
 
     attendance = (attended/total)*100
     return attendance
