@@ -20,11 +20,7 @@ percentage = int(calculate_attendance(conducted, attended, planned_miss))
 st.divider()
 st.subheader(f"Current Attendance: {percentage}%")
 
-if percentage < 75:
-    st.error(f"⚠️ **DETAINED**: You are {75 - percentage}% below the limit!")
-    
-    st.write("---")
-    st.subheader("Recovery Plan")
+if True:
     target = st.slider("What is your goal percentage?", 75, 95, 75)
     
     needed = classes_needed_to_reach_target(target, conducted, attended, planned_miss)
