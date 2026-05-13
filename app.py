@@ -20,14 +20,15 @@ percentage = int(calculate_attendance(conducted, attended, planned_miss))
 st.divider()
 st.subheader(f"Current Attendance: {percentage}%")
 
+
+if 75 <= percentage < 80:
+    st.warning("⚡ **WARNING**: You are in the danger zone. Don't skip!")
+else:
+    st.success("✅ **SAFE**: You are maintaining a good record.")
+
 if True:
-    target = st.slider("What is your goal percentage?", 75, 95, 75)
+    target = st.slider("What is your goal percentage?", percentage, 100, percentage)
     
     needed = classes_needed_to_reach_target(target, conducted, attended, planned_miss)
     
     st.info(f"👉 To reach **{target}%**, you must attend the next **{needed}** classes without missing any.")
-
-elif 75 <= percentage < 80:
-    st.warning("⚡ **WARNING**: You are in the danger zone. Don't skip!")
-else:
-    st.success("✅ **SAFE**: You are maintaining a good record.")
