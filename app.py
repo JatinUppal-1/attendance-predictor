@@ -9,8 +9,8 @@ st.markdown("Calculate your status for **CGC Landran** classes.")
 col1, col2 = st.columns(2)
 
 with col1:
-    conducted = st.number_input("Classes Conducted", min_value=1, value=0)
-    attended = st.number_input("Classes Attended", min_value=0, max_value = conducted,value=0)
+    conducted = st.number_input("Classes Conducted", min_value=1, value=40)
+    attended = st.number_input("Classes Attended", min_value=0, max_value = conducted,value=30)
 
 with col2:
     planned_miss = st.number_input("Planned Misses", min_value=0, value=0)
