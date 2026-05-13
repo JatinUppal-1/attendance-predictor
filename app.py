@@ -23,6 +23,8 @@ st.subheader(f"Current Attendance: {percentage}%")
 
 if 75 <= percentage < 80:
     st.warning("⚡ **WARNING**: You are in the danger zone. Don't skip!")
+elif percentage<75:
+    st.warning("⚡ **WARNING**: You are DETAINED")
 else:
     st.success("✅ **SAFE**: You are maintaining a good record.")
 
